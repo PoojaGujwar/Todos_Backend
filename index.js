@@ -10,6 +10,8 @@ initialDatabase();
 app.use(express.json());
 app.use(cors());
 
+console.log("Mongo",process.env.MONGODB)
+
 app.use("/api/todos",todoRoutes)
 
 app.listen(port, ()=>{
